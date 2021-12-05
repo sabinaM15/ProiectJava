@@ -1,0 +1,25 @@
+<div th:switch="${books}">
+    <h2 th:case="null">No books yet!</h2>
+    <div th:case="*">
+        <h2>books</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>author</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="book : ${#books}">
+                <td th:text="${book.id}"></td>
+                <td th:text="${book.title}"></td>
+                <td th:text="${book.author}"></td>
+<!--                <td><a th:href="@{/api/new(id=${book.id})}">Edit</a></td>-->
+                <td><a th:href="@{/api/new}">Add new</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <p><a href="/add-book">Add a new book</a></p>
+</div>

@@ -1,0 +1,5 @@
+com\programareweb\repository\BookRepository.class
+com\programareweb\controller\Controller.class
+com\programareweb\BooksApp.class
+com\programareweb\entity\Book.class
+com\programareweb\config\DbConfig.class
